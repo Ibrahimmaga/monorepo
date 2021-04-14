@@ -24,8 +24,8 @@ jobs:
           key: 12.x-${{ runner.OS }}-build-${{ hashFiles('package.json') }}
       - name: Git Identity
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'ibrahimmaga'
+          git config --global user.email 'imaga75@hotmail.com'
           git remote set-url origin https://github.com/Ibrahimmaga/monorepo.git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -41,8 +41,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: 'https://registry.npmjs.org/'
       - name: Publish
         run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
