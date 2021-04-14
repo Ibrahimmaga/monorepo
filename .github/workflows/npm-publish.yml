@@ -26,7 +26,6 @@ jobs:
         run: |
           git config --global user.name 'ibrahimmaga'
           git config --global user.email 'imaga75@hotmail.com'
-          git remote set-url origin https://github.com/Ibrahimmaga/monorepo.git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install
@@ -41,7 +40,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-          registry-url: 'https://registry.npmjs.org/'
+          registry-url: 'https://registry.npmjs.org/@ibrahimmaga'
       - name: Publish
         run: |
           cd packages
