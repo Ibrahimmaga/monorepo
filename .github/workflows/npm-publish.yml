@@ -36,11 +36,7 @@ jobs:
           yarn install
           yarn build
           yarn test 
-          cd .. 
-          cd packages/monotwo-app
-          yarn install
-          yarn build
-          yarn test  
+          
       - name: Setup Node ${{ matrix.node_version }}
         uses: actions/setup-node@v1
         with:
